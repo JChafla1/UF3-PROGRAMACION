@@ -4,3 +4,9 @@ vim Document.txt
 "Documento a cambiar de nombre"
 ESC --> :x
 python3
+
+import os
+os.rename('Document.txt', 'Document')
+
+control + G
+ls

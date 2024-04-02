@@ -1,0 +1,6 @@
+cd Documents
+cd UF3
+vim Document.txt
+"Documento a cambiar de nombre"
+ESC --> :x
+python3

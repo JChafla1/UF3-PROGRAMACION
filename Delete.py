@@ -8,6 +8,7 @@ class BorrarArchivo:
         if os.path.isfile(ruta):
             # Si existe, eliminar
             os.rename(ruta)
+            print("El archivo ha sido eliminado correctamente.")
         else:
             print("El fichero no existe")
 

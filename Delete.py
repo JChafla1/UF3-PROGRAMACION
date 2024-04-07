@@ -4,7 +4,7 @@ import os
 class BorrarArchivo:
     def __init__(self):
         # Leer ruta
-        ruta = leer_ruta()
+        ruta = self.leer_ruta()
         # Mirar si existe
         if os.path.isfile(ruta):
             # Si existe, quitar extension

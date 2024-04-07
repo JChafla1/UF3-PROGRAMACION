@@ -18,6 +18,13 @@ class BorrarArchivo:
     def leer_ruta(self):
         ruta = input("Escribe la ruta del fichero o carpeta existente: ")
         return ruta
+    
+    def vaciar_carpeta(self, carpeta):
+        for root, dirs, files in os.walk(carpeta, topdown=False):
+            for file in files:
+                os.remove(os.path.join(root, file))
+            for dir in dirs:
+                os.rmdir(os.path.join(root, dir))
 
 
 # Instanciar la clase para que se ejecute automáticamente al ser importada

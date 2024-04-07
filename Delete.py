@@ -1,5 +1,6 @@
 import os
 
+# Codigo reciclado del primer ejercico
 class BorrarArchivo:
     def __init__(self):
         # Leer ruta

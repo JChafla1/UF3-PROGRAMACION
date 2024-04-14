@@ -7,7 +7,11 @@ def main():
 
         if opcion == "1":
             # Añadir empleado
-
+            nombre = input("Introduce el nombre del empleado: ")
+            apellido = input("Introduce el apellido del empleado: ")
+            edad = input("Introduce la edad del empleado: ")
+            gestion_empleados.añadir_empleados(nombre, apellido, edad, "empleats.txt")
+            print("Empleado añadido correctamente.")
 
         elif opcion == "2":
             # Buscar empleados

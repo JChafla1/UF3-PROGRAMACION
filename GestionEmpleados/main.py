@@ -15,6 +15,12 @@ def main():
 
         elif opcion == "2":
             # Buscar empleados
+            nombre = input("Introduce el nombre del empleado a buscar: ")
+            empleado_encontrado = gestion_empleados.buscar_empleados(nombre, "empleats.txt")
+            if empleado_encontrado:
+                print(f"Empleado: {', '.join(empleado_encontrado)}")
+            else:
+                print(f"No se encuentra al empleado: {nombre}")
 
 
         elif opcion == "3":

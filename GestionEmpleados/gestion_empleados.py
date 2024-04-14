@@ -4,7 +4,13 @@ def añadir_empleados(nombre, apellido, edad, archivo):
         file.write(f"{nombre},{apellido},{edad}\n") 
 
 # Buscar empleados
-def buscar_empleados():
+def buscar_empleados(nombre, archivo):
+    with open(archivo, 'r') as file: # Abrir el archivo en modo de lectura
+        for line in file: # Iterar sobre cada línea del archivo
+            empleado = line.strip().split(',')
+            if empleado[0] == nombre:
+                return empleado
+    return None
 
 # Listar empleados
 def listar_empleados():

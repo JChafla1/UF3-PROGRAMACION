@@ -13,7 +13,12 @@ def buscar_empleados(nombre, archivo):
     return None
 
 # Listar empleados
-def listar_empleados():
+def listar_empleados(archivo):
+    empleados = [] # Almacenar los datos de los empleados
+    with open(archivo, 'r') as file: # Abrir el archivo en modo de lectura
+        for line in file:
+            empleados.append(line.strip().split(','))
+    return empleados
 
 # Mostrar menu
 def mostrar_menu():

@@ -9,3 +9,9 @@ def buscar_empleados():
 # Listar empleados
 def listar_empleados():
 
+# Mostrar menu
+def mostrar_menu():
+    print("\n1. Añadir empleado")
+    print("2. Buscar empleados")
+    print("3. Listar empleados")
+    print("4. Salir")

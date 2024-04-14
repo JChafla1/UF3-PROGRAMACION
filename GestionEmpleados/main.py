@@ -25,6 +25,10 @@ def main():
 
         elif opcion == "3":
             # Listar empleados
+            print("\nLlistat d'empleats:")
+            empleados = gestion_empleados.listar_empleados("empleats.txt")
+            for empleado in empleados:
+                print(', '.join(empleado))
 
         elif opcion == "4":
             print("Adios!")

@@ -70,4 +70,9 @@ public class Inventory {
         return items.filter { it.tipo.equals(tipo, ignoreCase = true) }
     }
 
+    // Listar Items
+    fun listarTodosLosItems(): List<Item> {
+        return items.toList()
+    }
+
 }

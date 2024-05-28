@@ -5,4 +5,9 @@ public class Inventory {
   // "items" propiedad privada que contiene una lista mutable de elementos
     private val items: MutableList<Item> = mutableListOf()
 
+  // Añadir un elemento al inventario
+    fun agregarItem(item: Item) {
+        items.add(item)
+    }
+
 }

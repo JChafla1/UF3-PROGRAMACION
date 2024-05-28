@@ -20,4 +20,9 @@ public class Inventory {
         return items.find { it.id == id }
     }
 
+  // Obtener todos los elementos del inventario
+    fun obtenerTodosLosItems(): List<Item> {
+        return items.toList()
+    }
+
 }

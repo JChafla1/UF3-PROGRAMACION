@@ -1,11 +1,11 @@
 /*Esta vez creo una clase normal*/
 /*Estuve un buen rato viendo porque no m funcionaba, y era porque habia hecho un javaclass*/
 
-import kotlinx.serialization.json.Json;
-import kotlinx.serialization.json.JsonConfiguration;
-import java.io.File;
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonConfiguration
+import java.io.File
 
-import kotlinx.serialization.Serializable;
+import kotlinx.serialization.Serializable
 
 @Serializable
 public class Inventory {

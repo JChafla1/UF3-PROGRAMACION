@@ -38,6 +38,18 @@ fun main() {
                     println("No se ha podido encontrar ningún ítem con el ID proporcionado.")
                 }
             }
+            3 -> {
+                print("Introduce el nombre del ítem a buscar: ")
+                val nomBuscar = readLine() ?: ""
+
+                val itemsEncontrados = inventory.buscarItemsPorNombre(nomBuscar)
+                if (itemsEncontrados.isNotEmpty()) {
+                    println("Ítems encontrados:")
+                    itemsEncontrados.forEach { println(it) }
+                } else {
+                    println("No se ha encontrado ningún ítem con el nombre proporcionado.")
+                }
+            }
             
         }
     }

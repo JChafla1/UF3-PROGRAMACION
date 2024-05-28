@@ -28,4 +28,12 @@ public class Inventory {
         return items.toList()
     }
 
+
+  // Método para guardar el inventario en un archivo JSON
+    fun guardarInventarioAJson(nomFitxer: String) {
+        val json = Json(JsonConfiguration.Stable)
+        val jsonString = json.stringify(items)
+        File(nomFitxer).writeText(jsonString)
+    }
+
 }

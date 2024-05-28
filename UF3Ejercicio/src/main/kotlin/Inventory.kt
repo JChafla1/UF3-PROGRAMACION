@@ -75,4 +75,25 @@ public class Inventory {
         return items.toList()
     }
 
+
+    // Calcular Valor
+    fun calcularValorTotal(): Int {
+        return items.sumBy { it.valor }
+    }
+
+    // CalcularPeso
+    fun calcularPesoTotal(): Double {
+        return items.sumByDouble { it.peso }
+    }
+
+    // Encontrar el item mas valisoso
+    fun encontrarItemMasValioso(): Item? {
+        return items.maxByOrNull { it.valor }
+    }
+
+    // Encontrar el item mas pesado
+    fun encontrarItemMasPesado(): Item? {
+        return items.maxByOrNull { it.peso }
+    }
+
 }

@@ -3,11 +3,11 @@
 * para funciones como "equals()", "hashCode()" y cosas asi */
 
 data class Item(
-    // Atributos
+    // Atributos, los he cambiado a castellano que me lio si no
     val id: Int,
-    val nom: String,
-    val tipus: String,
+    val nombre: String,
+    val tipo: String,
     val valor: Int,
-    val pes: Double
+    val peso: Double
     
 )

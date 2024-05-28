@@ -40,4 +40,13 @@ public class Inventory {
         File(nombreFitxero).writeText(jsonString)
     }
 
+  // Método para cargar el inventario desde un archivo JSON
+    fun cargarInventarioDesDeJson(nombreFitxero: String) {
+        val json = Json(JsonConfiguration.Stable)
+        val jsonString = File(nombreFitxero).readText()
+        val itemsFromJson = json.parse(Item.serializer().list, jsonString)
+        items.clear()
+        items.addAll(itemsFromJson)
+    }
+
 }

@@ -50,6 +50,49 @@ fun main() {
                     println("No se ha encontrado ningún ítem con el nombre proporcionado.")
                 }
             }
+            4 -> {
+                print("Introduce el tipo del ítem a buscar: ")
+                val tipoBuscar = readLine() ?: ""
+
+                val itemsEncontrados = inventory.buscarItemsPorTipo(tipoBuscar)
+                if (itemsEncontrados.isNotEmpty()) {
+                    println("Ítems encontrados:")
+                    itemsEncontrados.forEach { println(it) }
+                } else {
+                    println("No se ha encontrado ningún ítem con el tipo proporcionado.")
+                }
+            }
+            5 -> {
+                println("Todos los ítems en el inventario:")
+                inventory.listarTodosLosItems().forEach { println(it) }
+            }
+            6 -> {
+                println("El valor total del inventario es: ${inventory.calcularValorTotal()}")
+            }
+            7 -> {
+                println("El peso total del inventario es: ${inventory.calcularPesoTotal()}")
+            }
+            8 -> {
+                val itemMasValioso = inventory.encontrarItemMasValioso()
+                if (itemMasValioso != null) {
+                    println("El ítem más valioso es: $itemMasValioso")
+                } else {
+                    println("No hay ítems en el inventario.")
+                }
+            }
+            9 -> {
+                val itemMasPesado = inventory.encontrarItemMasPesado()
+                if (itemMasPesado != null) {
+                    println("El ítem más pesado es: $itemMasPesado")
+                } else {
+                    println("No hay ítems en el inventario.")
+                }
+            }
+            10 -> {
+                println("¡Adiós!")
+                return
+            }
+            else -> println("Opción inválida. Por favor, selecciona una opción válida.")
             
         }
     }

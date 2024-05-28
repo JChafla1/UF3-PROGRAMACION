@@ -1,5 +1,9 @@
 /*Esta vez creo una clase normal*/
 
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonConfiguration
+import java.io.File
+
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -30,10 +34,10 @@ public class Inventory {
 
 
   // Método para guardar el inventario en un archivo JSON
-    fun guardarInventarioAJson(nomFitxer: String) {
+    fun guardarInventarioAJson(nombreFitxero: String) {
         val json = Json(JsonConfiguration.Stable)
         val jsonString = json.stringify(items)
-        File(nomFitxer).writeText(jsonString)
+        File(nombreFitxero).writeText(jsonString)
     }
 
 }

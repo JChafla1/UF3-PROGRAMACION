@@ -13,6 +13,11 @@ dependencies {
     testImplementation(kotlin("test"))
 }
 
+// Dependencia añadida
+dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
+}
+
 tasks.test {
     useJUnitPlatform()
 }

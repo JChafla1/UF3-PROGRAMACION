@@ -10,4 +10,9 @@ public class Inventory {
         items.add(item)
     }
 
+  // Eliminar elemento del inventario
+    fun eliminarItem(id: Int): Boolean {
+        return items.removeIf { it.id == id }
+    }
+
 }

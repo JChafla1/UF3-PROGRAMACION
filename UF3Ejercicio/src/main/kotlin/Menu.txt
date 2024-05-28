@@ -1,0 +1,11 @@
+=== Menú ===
+1. Añadir un nuevo elemento al inventario
+2. Eliminar un ítem del inventario por id
+3. Buscar ítems por nombre
+4. Buscar ítems por tipos
+5. Listar todos los ítems en el inventario
+6. Calcular el valor total del inventario
+7. Calcular el peso total del inventario
+8. Encontrar el ítem más valioso
+9. Encontrar el ítem más pesado
+10. Salir

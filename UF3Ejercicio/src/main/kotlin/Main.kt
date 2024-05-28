@@ -28,6 +28,17 @@ fun main() {
                 inventory.agregarNuevoItem(id, nombre, Tipo, valor, peso)
                 println("Ítem añadido con exito")
             }
+            2 -> {
+                print("Introduce el ID del ítem a eliminar: ")
+                val idEliminar = readLine()?.toIntOrNull() ?: 0
+
+                if (inventory.eliminarItemPorId(idEliminar)) {
+                    println("Ítem eliminado con éxito.")
+                } else {
+                    println("No se ha podido encontrar ningún ítem con el ID proporcionado.")
+                }
+            }
+            
         }
     }
     

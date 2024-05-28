@@ -1,5 +1,8 @@
 /*Esta vez creo una clase normal*/
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 public class Inventory {
 
   // "items" propiedad privada que contiene una lista mutable de elementos

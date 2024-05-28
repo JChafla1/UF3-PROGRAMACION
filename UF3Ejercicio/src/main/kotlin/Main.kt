@@ -12,5 +12,9 @@ fun main() {
 
     // Cargar el inventario desde el archivo JSON
     inventory.cargarInventarioDesDeJson("inventario.json")
+
+    // Mostrar el inventario cargado
+    println("Inventario cargado:")
+    inventory.obtenerTodosLosItems().forEach { println(it) }
     
 }

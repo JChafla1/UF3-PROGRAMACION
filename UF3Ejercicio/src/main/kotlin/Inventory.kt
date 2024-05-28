@@ -49,4 +49,11 @@ public class Inventory {
         items.addAll(itemsFromJson)
     }
 
+
+    // Agregar nuevo item
+    fun agregarNuevoItem(id: Int, nombre: String, tipo: String, valor: Int, peso: Double) {
+        val nouItem = Item(id, nombre, tipo, valor, peso)
+        items.add(nouItem)
+    }
+
 }

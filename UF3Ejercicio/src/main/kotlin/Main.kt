@@ -1,6 +1,12 @@
+import java.io.File
+
+fun cargarInterfazUsuario(nombreFitxero: String): String {
+    return File(nombreFitxero).readText()
+}
 
 fun main() {
     val inventory = Inventory()
+    val menu = cargarInterfazUsuario("menu.txt")
 
     // Agregar elementos al inventario
     inventory.afegirItem(Item(1, "Espada", "Arma", 100, 2.5))

@@ -61,4 +61,13 @@ public class Inventory {
         return items.removeIf { it.id == id }
     }
 
+    // Buscar Items
+    fun buscarItemsPorNombre(nombre: String): List<Item> {
+        return items.filter { it.nombre.equals(nombre, ignoreCase = true) }
+    }
+
+    fun buscarItemsPorTipo(tipo: String): List<Item> {
+        return items.filter { it.tipo.equals(tipo, ignoreCase = true) }
+    }
+
 }

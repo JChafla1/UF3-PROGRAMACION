@@ -56,4 +56,9 @@ public class Inventory {
         items.add(nouItem)
     }
 
+    // Eliminar item item
+    fun eliminarItemPorId(id: Int): Boolean {
+        return items.removeIf { it.id == id }
+    }
+
 }

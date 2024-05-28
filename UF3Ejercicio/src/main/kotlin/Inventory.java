@@ -15,4 +15,9 @@ public class Inventory {
         return items.removeIf { it.id == id }
     }
 
+  // Obtener un elemento del inventario
+    fun obtenerItem(id: Int): Item? {
+        return items.find { it.id == id }
+    }
+
 }
